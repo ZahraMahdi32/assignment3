@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zahra Portfolio – Assignment 3</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Zahra’s Portfolio</h1>
+    <button id="theme-toggle">Toggle Theme</button>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h2 id="greeting">Welcome!</h2>
+      <label>
+        Your name:
+        <input type="text" id="name-input" placeholder="Type your name" />
+      </label>
+    </section>
+
+    <section id="projects">
+      <h2>Latest GitHub Repositories</h2>
+      <div class="controls">
+        <button data-filter="all">All</button>
+        <button data-filter="school">School</button>
+        <button data-filter="personal">Personal</button>
+
+        <select id="sort-select">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+        </select>
+      </div>
+      <div id="projects-list"></div>
+      <p id="projects-error" class="error hidden"></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form" novalidate>
+        <label>Email <input type="email" id="email" /></label>
+        <span class="error" id="email-error"></span>
+
+        <label>Message <textarea id="message"></textarea></label>
+        <span class="error" id="message-error"></span>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

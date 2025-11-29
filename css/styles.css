@@ -1,0 +1,214 @@
+/* ===============================
+   Global Styles
+================================*/
+:root {
+  --bg-light: #f5f6fa;
+  --bg-dark: #1e1e1e;
+  --text-light: #1c1c1c;
+  --text-dark: #fafafa;
+  --card-light: #ffffff;
+  --card-dark: #2a2a2a;
+  --primary: #4c6ef5;
+  --primary-hover: #3b5bdb;
+  --border-light: #ddd;
+  --border-dark: #444;
+  --radius: 10px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --transition: 0.25s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 40px;
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+[data-theme="dark"] {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* ===============================
+   Header
+================================*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+#theme-toggle {
+  background: var(--primary);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 14px;
+}
+
+#theme-toggle:hover {
+  background: var(--primary-hover);
+}
+
+/* ===============================
+   Section Layout
+================================*/
+section {
+  margin-bottom: 50px;
+  padding: 20px 0;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* ===============================
+   Hero Input
+================================*/
+#name-input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  width: 220px;
+}
+
+[data-theme="dark"] #name-input {
+  background: var(--card-dark);
+  color: white;
+  border: 1px solid var(--border-dark);
+}
+
+/* ===============================
+   Controls (Buttons + Sort)
+================================*/
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls button,
+.controls select {
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  background: white;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 14px;
+}
+
+.controls button:hover,
+.controls select:hover {
+  background: #eef1ff;
+}
+
+[data-theme="dark"] .controls button,
+[data-theme="dark"] .controls select {
+  background: var(--card-dark);
+  border: 1px solid var(--border-dark);
+  color: white;
+}
+
+/* ===============================
+   Repository Cards
+================================*/
+#projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-light);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+[data-theme="dark"] .card {
+  background: var(--card-dark);
+  border: 1px solid var(--border-dark);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===============================
+   Contact Form
+================================*/
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  font-size: 14px;
+  resize: none;
+}
+
+[data-theme="dark"] #contact-form input,
+[data-theme="dark"] #contact-form textarea {
+  background: var(--card-dark);
+  color: white;
+  border: 1px solid var(--border-dark);
+}
+
+#contact-form button {
+  padding: 12px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-size: 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#contact-form button:hover {
+  background: var(--primary-hover);
+}
+
+.error {
+  color: #e03131;
+  font-size: 13px;
+}
